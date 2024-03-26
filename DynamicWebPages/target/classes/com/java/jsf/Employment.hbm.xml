@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Mar 16, 2024, 9:28:32 AM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.jsf.Employment" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="EMPLOYMENT">
+        <id name="personId" type="int">
+            <column name="Person_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="company" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="COMPANY"/>
+        </property>
+        <property generated="never" lazy="false" name="role" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="ROLE"/>
+        </property>
+        <property generated="never" lazy="false" name="experience" optimistic-lock="true" type="int" unique="false">
+            <column name="EXPERIENCE"/>
+        </property>
+    </class>
+</hibernate-mapping>

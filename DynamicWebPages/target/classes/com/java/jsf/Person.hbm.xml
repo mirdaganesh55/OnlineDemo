@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Mar 11, 2024, 5:34:05 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.jsf.Person" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="PERSON">
+        <id name="personId" type="int">
+            <column name="Person_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="firstName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="FIRST_NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="lastName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="LAST_NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="GENDER"/>
+        </property>
+        <property generated="never" lazy="false" name="ssn" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="SSN"/>
+        </property>
+        <property generated="never" lazy="false" name="dateOfBirth" optimistic-lock="true" type="java.util.Date" unique="false">
+            <column name="DATE_OF_BIRTH"/>
+        </property>
+        <property generated="never" lazy="false" name="address" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="ADDRESS"/>
+        </property>
+        <property generated="never" lazy="false" name="phoneNumber" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PHONE_NUMBER"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="EMAIL"/>
+        </property>
+        <property generated="never" lazy="false" name="income" optimistic-lock="true" type="int" unique="false">
+            <column name="INCOME"/>
+        </property>
+        <property generated="never" lazy="false" name="isEmployed" optimistic-lock="true" type="boolean" unique="false">
+            <column name="IS_EMPLOYED"/>
+        </property>
+        <property generated="never" lazy="false" name="hasDependents" optimistic-lock="true" type="boolean" unique="false">
+            <column name="HAS_DEPENDENTS"/>
+        </property>
+    </class>
+</hibernate-mapping>

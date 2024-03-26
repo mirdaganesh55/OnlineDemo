@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_0.xsd" 
+              version="2.0" metadata-complete="false">
+    <!-- This file must be present with our jar, even if it is empty.  Otherwise, our Java annotations won't get scanned! -->
+<managed-bean>
+	<managed-bean-name>person</managed-bean-name>
+    <managed-bean-class>com.java.jsf.Person</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>personDao</managed-bean-name>
+    <managed-bean-class>com.java.jsf.PersonDAOImpl</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>employ</managed-bean-name>
+    <managed-bean-class>com.java.jsf.Employment</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>personController</managed-bean-name>
+    <managed-bean-class>com.java.jsf.PersonController</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <managed-property>
+            <property-name>person</property-name>
+            <property-class>com.java.jsf.Person</property-class>
+            <value>#{person}</value>
+    </managed-property>
+    <managed-property>
+            <property-name>personDao</property-name>
+            <property-class>com.java.jsf.PersonDAOImpl</property-class>
+            <value>#{personDao}</value>
+    </managed-property>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>user</managed-bean-name>
+    <managed-bean-class>com.java.jsf.PersonRegister</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<application>
+        <resource-bundle>
+            <base-name>Messages</base-name>
+            <var>msg</var>
+        </resource-bundle>
+</application>
+
+</faces-config>
